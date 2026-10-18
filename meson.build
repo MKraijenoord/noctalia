@@ -1326,7 +1326,6 @@ if build_tests
     'uri',
     'vdir_reader',
     'virtual_grid_view_gesture',
-    'wallpaper_first_frame',
     'wallpaper_scan_symlink',
     'wallpaper_shuffle_state',
     'wayland_output_scale',
