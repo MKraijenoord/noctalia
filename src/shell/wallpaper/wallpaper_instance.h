@@ -58,7 +58,3 @@ struct WallpaperInstance {
   WallpaperTransition activeTransition = WallpaperTransition::Fade;
   TransitionParams transitionParams;
 };
-
-[[nodiscard]] inline bool showsSettledWallpaper(const WallpaperInstance& instance) noexcept {
-  return instance.loadingPath.empty() && !instance.transitioning;
-}
