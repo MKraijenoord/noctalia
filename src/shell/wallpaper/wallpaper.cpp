@@ -1321,7 +1321,7 @@ bool Wallpaper::firstFrameShown() const noexcept { return m_firstFrame.done(); }
 void Wallpaper::setFirstFrameCallback(std::function<void()> callback) { m_firstFrame.setCallback(std::move(callback)); }
 
 void Wallpaper::onInstanceRendered(WallpaperInstance& instance) {
-  if (instance.loadingPath.empty() && !instance.transitioning) {
+  if (showsSettledWallpaper(instance)) {
     instance.firstFrame->shown();
   }
 }
